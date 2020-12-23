@@ -45,7 +45,7 @@
 
         <div class="headers row">
           <h5>Headers</h5>
-          {{ if eq (len $req.Headers) 0 }}
+          {{ if ne (len $req.Headers) 0 }}
             <dl>
               {{ range $req.Headers }}
                 <dt class="name col-md-3 col-xs-12">{{ .Name }}</dt>
